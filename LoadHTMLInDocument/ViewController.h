@@ -9,5 +9,15 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+{
+@private
+    UIWebView   *_webView;
+}
+
+@property(nonatomic, strong)IBOutlet UIWebView *webView;
+
+- (IBAction)btn1tap:(id)sender;
+
+- (IBAction)btn2tap:(id)sender;
 
 @end

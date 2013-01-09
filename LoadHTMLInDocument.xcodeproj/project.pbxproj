@@ -18,6 +18,10 @@
 		C487CC2B169DB04F00EA9BD1 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C487CC2A169DB04F00EA9BD1 /* Default-568h@2x.png */; };
 		C487CC2E169DB04F00EA9BD1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C487CC2D169DB04F00EA9BD1 /* ViewController.m */; };
 		C487CC31169DB04F00EA9BD1 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C487CC2F169DB04F00EA9BD1 /* ViewController.xib */; };
+		C487CC49169DB99700EA9BD1 /* template.css in Resources */ = {isa = PBXBuildFile; fileRef = C487CC42169DB99700EA9BD1 /* template.css */; };
+		C487CC4A169DB99700EA9BD1 /* jquery-1.8.3.js in Sources */ = {isa = PBXBuildFile; fileRef = C487CC44169DB99700EA9BD1 /* jquery-1.8.3.js */; };
+		C487CC4B169DB99700EA9BD1 /* template.js in Sources */ = {isa = PBXBuildFile; fileRef = C487CC45169DB99700EA9BD1 /* template.js */; };
+		C487CC4C169DB99700EA9BD1 /* MyTemplate.html in Resources */ = {isa = PBXBuildFile; fileRef = C487CC46169DB99700EA9BD1 /* MyTemplate.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +41,10 @@
 		C487CC2C169DB04F00EA9BD1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		C487CC2D169DB04F00EA9BD1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		C487CC30169DB04F00EA9BD1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		C487CC42169DB99700EA9BD1 /* template.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = template.css; sourceTree = "<group>"; };
+		C487CC44169DB99700EA9BD1 /* jquery-1.8.3.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "jquery-1.8.3.js"; sourceTree = "<group>"; };
+		C487CC45169DB99700EA9BD1 /* template.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = template.js; sourceTree = "<group>"; };
+		C487CC46169DB99700EA9BD1 /* MyTemplate.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = MyTemplate.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +67,7 @@
 				C487CC1A169DB04F00EA9BD1 /* LoadHTMLInDocument */,
 				C487CC13169DB04F00EA9BD1 /* Frameworks */,
 				C487CC11169DB04F00EA9BD1 /* Products */,
+				C487CC3D169DB0DB00EA9BD1 /* Resources */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,6 +92,7 @@
 		C487CC1A169DB04F00EA9BD1 /* LoadHTMLInDocument */ = {
 			isa = PBXGroup;
 			children = (
+				C487CC3B169DB08500EA9BD1 /* Controller */,
 				C487CC23169DB04F00EA9BD1 /* AppDelegate.h */,
 				C487CC24169DB04F00EA9BD1 /* AppDelegate.m */,
 				C487CC2C169DB04F00EA9BD1 /* ViewController.h */,
@@ -105,6 +115,49 @@
 				C487CC2A169DB04F00EA9BD1 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C487CC3B169DB08500EA9BD1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		C487CC3D169DB0DB00EA9BD1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C487CC3E169DB99700EA9BD1 /* Temp */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		C487CC3E169DB99700EA9BD1 /* Temp */ = {
+			isa = PBXGroup;
+			children = (
+				C487CC41169DB99700EA9BD1 /* css */,
+				C487CC43169DB99700EA9BD1 /* js */,
+				C487CC46169DB99700EA9BD1 /* MyTemplate.html */,
+			);
+			name = Temp;
+			path = Resources/Temp;
+			sourceTree = "<group>";
+		};
+		C487CC41169DB99700EA9BD1 /* css */ = {
+			isa = PBXGroup;
+			children = (
+				C487CC42169DB99700EA9BD1 /* template.css */,
+			);
+			path = css;
+			sourceTree = "<group>";
+		};
+		C487CC43169DB99700EA9BD1 /* js */ = {
+			isa = PBXGroup;
+			children = (
+				C487CC44169DB99700EA9BD1 /* jquery-1.8.3.js */,
+				C487CC45169DB99700EA9BD1 /* template.js */,
+			);
+			path = js;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,6 +216,8 @@
 				C487CC29169DB04F00EA9BD1 /* Default@2x.png in Resources */,
 				C487CC2B169DB04F00EA9BD1 /* Default-568h@2x.png in Resources */,
 				C487CC31169DB04F00EA9BD1 /* ViewController.xib in Resources */,
+				C487CC49169DB99700EA9BD1 /* template.css in Resources */,
+				C487CC4C169DB99700EA9BD1 /* MyTemplate.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +231,8 @@
 				C487CC21169DB04F00EA9BD1 /* main.m in Sources */,
 				C487CC25169DB04F00EA9BD1 /* AppDelegate.m in Sources */,
 				C487CC2E169DB04F00EA9BD1 /* ViewController.m in Sources */,
+				C487CC4A169DB99700EA9BD1 /* jquery-1.8.3.js in Sources */,
+				C487CC4B169DB99700EA9BD1 /* template.js in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +348,7 @@
 				C487CC36169DB04F00EA9BD1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
