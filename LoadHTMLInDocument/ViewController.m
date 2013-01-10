@@ -33,7 +33,18 @@
 
 - (void)loadTemplate
 {
-    NSString *templatePath = [[NSBundle mainBundle] pathForResource:@"MyTemplate" ofType:@"html"];
+//    NSBundle *tempBundle = [NSBundle bundleWithIdentifier:@"com.aimob.tempBundle"];
+    
+//    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    
+    NSString *bundlePath = [[NSBundle mainBundle] pathForResource:@"Temp" ofType:@"bundle"];
+    NSBundle *tempBundle = [NSBundle bundleWithPath:bundlePath];
+    
+    NSError *error = nil;
+    [tempBundle loadAndReturnError:&error];
+    
+    NSString *templatePath = [NSString  stringWithFormat:@"%@/Contents/MyTemplate.html",bundlePath];
+//    NSString *templatePath = [tempBundle pathForResource:@"MyTemplate" ofType:@"html"];
     [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL fileURLWithPath:templatePath]]];
 }
 
@@ -42,7 +53,9 @@
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *filePath = [NSString stringWithFormat:@"%@/%@", [paths objectAtIndex:0],contentName];
     NSString *content = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
-    [self.webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"setContent(%@)",content]];
+    NSString *js = [NSString stringWithFormat:@"setContent(\"%@\");",content];
+//    [self.webView stringByEvaluatingJavaScriptFromString:@"setContent('a\na')"];
+    [self.webView stringByEvaluatingJavaScriptFromString:js];
 }
 
 #pragma mark - IBAction
